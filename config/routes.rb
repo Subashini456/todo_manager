@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   # - to view list of resource - index
   # - to view single resource - show
   # - to create a new resource
-  # - resource :todos --> rails get all the routes by default
+  # - resources :todos --> rails get all the routes by default
 
-  get "todos", to: "todos#index"
-  get "todos/:id", to: "todos#show"
+  resources :todos
 end
