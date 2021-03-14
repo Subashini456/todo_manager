@@ -10,7 +10,8 @@ class SessionsController < ApplicationController
       session[:current_user_id] = user.id
       redirect_to "/"
     else
-      render plain: "You entered wrong pwd"
+      flash[:error] = "Your login attempt is invalid. Try again"
+      redirect_to new_sessions_path
     end
   end
 
