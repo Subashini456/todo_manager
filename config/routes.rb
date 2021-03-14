@@ -7,5 +7,11 @@ Rails.application.routes.draw do
   # - to create a new resource
   # - resources :todos --> rails get all the routes by default
 
+  get "/", to: "home#index"
   resources :todos
+
+  resources :users
+
+  get "/signin" => "sessions#new", as: :new_sessions
+  post "/signin" => "sessions#create", as: :sessions
 end
