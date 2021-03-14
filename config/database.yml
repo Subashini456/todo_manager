@@ -9,7 +9,7 @@ development:
   host: localhost
   user: postgres
   password: Suba@30post
-  database: saas_db
+  database: todo_course
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
